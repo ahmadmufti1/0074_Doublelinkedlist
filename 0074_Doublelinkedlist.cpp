@@ -69,4 +69,9 @@ public:
             current->next = newNode;
     }
 
+    void hapus() //void hapus adalah fungsi untuk menghapus node dari linked list
+    {
+        
+    }
+
 };
