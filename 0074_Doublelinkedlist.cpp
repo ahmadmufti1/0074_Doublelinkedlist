@@ -8,3 +8,7 @@ public:
     Node* prev;
     Node* next;
 };
+
+class DoubleLinkedList{ //Membuat class DoubleLinkedList untuk mengelola linked list
+
+};
