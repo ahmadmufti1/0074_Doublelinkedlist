@@ -10,5 +10,13 @@ public:
 };
 
 class DoubleLinkedList{ //Membuat class DoubleLinkedList untuk mengelola linked list
+private:
+    Node* START;
+
+public:
+    DoubleLinkedList()//untuk menginisialisasi linked list
+    {
+        START = NULL;
+    }
 
 };
