@@ -159,6 +159,30 @@ public:
 
     void searchData() //void searchData adalah fungsi untuk mencari node dalam linked list berdasarkan nomor mahasiswa
     {
-        
+        //cara kerja searchData adalah dengan meminta input dari pengguna untuk nomor mahasiswa yang ingin dicari. Fungsi akan menelusuri linked list mulai dari node pertama (START) hingga menemukan node dengan nomor mahasiswa yang sesuai atau mencapai akhir linked list (NULL). Jika node ditemukan, maka akan ditampilkan informasi tentang node tersebut. Jika nomor mahasiswa tidak ditemukan, maka akan ditampilkan pesan bahwa record tidak ditemukan. Setelah mencari, fungsi akan kembali ke menu utama.
+        if(START == NULL)
+        {
+            cout << "\nList is empty." << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        Node* current = START;
+
+        while(current != NULL && current->noMhs != rollNo)
+        current = current->next;
+
+        if(current == NULL)
+        {
+            cout << "Record not found\n";
+        }
+        else
+        {
+            cout << "Record Found\n";
+            cout << "Roll Number: " << current->noMhs << endl;
+        }
     }
 };
