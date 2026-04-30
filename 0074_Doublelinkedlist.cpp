@@ -71,7 +71,43 @@ public:
 
     void hapus() //void hapus adalah fungsi untuk menghapus node dari linked list
     {
+        //cara kerja hapus adalah dengan meminta input dari pengguna untuk nomor mahasiswa yang ingin dihapus. Fungsi akan mencari node dengan nomor tersebut dalam linked list. Jika node ditemukan, maka node tersebut akan dihapus dari linked list dan memori yang digunakan oleh node tersebut akan dibebaskan. Jika nomor mahasiswa tidak ditemukan, maka akan ditampilkan pesan bahwa nomor tidak ditemukan. Setelah node dihapus, linked list akan tetap terurut berdasarkan nomor mahasiswa.
+        if(START == NULL)
+        {
+            cout << "\nList is empty." << endl;
+            return;
+        }
+
+        cout << "\nEnter the roll number of the student whose record is to be deleted : ";
+        int rollNo;
+        cin >> rollNo;
+
+        Node* current = START;
+
+        while(current != NULL && current->noMhs != rollNo)
+        current = current->next;
         
+        if(current == NULL)
+        {
+            cout << "Roll not found." << endl;
+            return;
+        }
+
+        if(current == START)
+        {
+            START = current->next;
+            if(START != NULL)
+                START->prev = NULL;
+        }
+        else
+        {
+            current->prev->next = current->next;
+            
+            if(current->next != NULL)
+                current->next->prev = current->prev;
+        }
+        delete current;
+        cout << "Record with roll number " << rollNo << " deleted" << endl;           
     }
 
 };
