@@ -131,4 +131,9 @@ public:
         }
     }
 
+    void revtraverse() //void revtraverse adalah fungsi untuk menampilkan semua node dalam linked list dalam urutan terbalik
+    {
+        
+    }
+
 };
