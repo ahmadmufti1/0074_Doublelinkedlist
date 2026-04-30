@@ -112,7 +112,23 @@ public:
 
     void traverse() //void traverse adalah fungsi untuk menampilkan semua node dalam linked list
     {
-       
+        //cara kerja traverse adalah dengan memulai dari node pertama (START) dan menampilkan nomor mahasiswa dari setiap node secara berurutan hingga mencapai akhir linked list (NULL). Jika linked list kosong, maka akan ditampilkan pesan bahwa list kosong. Setelah menampilkan semua node, fungsi akan kembali ke menu utama.
+        if(START == NULL)
+        {
+            cout << "\nList is empty." << endl;
+            return;
+        }
+
+        Node* currentNode = START;
+
+        cout << "\nRecords in ascending order of roll number are: \n" << endl;
+        int i = 0;
+        while(currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs<< " " << endl;
+            currentNode = currentNode->next;
+             i++;
+        }
     }
 
 };
