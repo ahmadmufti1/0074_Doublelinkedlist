@@ -156,5 +156,9 @@ public:
              i++;
         }
     }
-};
 
+    void searchData() //void searchData adalah fungsi untuk mencari node dalam linked list berdasarkan nomor mahasiswa
+    {
+        
+    }
+};
