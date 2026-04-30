@@ -110,4 +110,9 @@ public:
         cout << "Record with roll number " << rollNo << " deleted" << endl;           
     }
 
+    void traverse() //void traverse adalah fungsi untuk menampilkan semua node dalam linked list
+    {
+       
+    }
+
 };
