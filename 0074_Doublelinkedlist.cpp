@@ -19,4 +19,9 @@ public:
         START = NULL;
     }
 
+    void addNode() //untuk menambahkan node baru ke linked list
+    {
+        
+    }
+
 };
