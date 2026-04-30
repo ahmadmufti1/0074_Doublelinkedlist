@@ -133,7 +133,28 @@ public:
 
     void revtraverse() //void revtraverse adalah fungsi untuk menampilkan semua node dalam linked list dalam urutan terbalik
     {
-        
-    }
+        //cara kerja revtraverse adalah dengan memulai dari node terakhir (yang ditemukan dengan menelusuri linked list hingga mencapai node dengan next NULL) dan menampilkan nomor mahasiswa dari setiap node secara berurutan hingga mencapai awal linked list (START). Jika linked list kosong, maka akan ditampilkan pesan bahwa list kosong. Setelah menampilkan semua node dalam urutan terbalik, fungsi akan kembali ke menu utama.
+        if(START == NULL)
+        {
+            cout << "\nList is empty." << endl;
+            return;
+        }
 
+        Node* currentNode = START;
+        int i = 0;
+        while(currentNode->next != NULL)
+        {
+            currentNode = currentNode->next;
+            i++;
+        }
+
+        cout << "\nRecords in descending order of roll number are: \n";
+        while(currentNode != NULL)
+        {
+            cout << i + 1 << ". " << currentNode->noMhs<< " " << endl;
+            currentNode = currentNode->prev;
+             i++;
+        }
+    }
 };
+
